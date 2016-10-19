@@ -47,6 +47,13 @@ the number of NAs in dataset is: 2304
 
 
 ```r
+maxInterval<- which.max(meanByInterval)
+interval<-names(maxInterval)
+```
+Max value found in 835 interval
+
+
+```r
 #let's fill NA with mean by that interval value
 activityDataNoNA<-activityData
 nRows <- is.na(activityData$steps)
@@ -57,7 +64,7 @@ totalStepsByDateNoNA<-tapply(activityDataNoNA$steps,activityDataNoNA$date,sum)
 hist(totalStepsByDateNoNA,main="Total steps by data with filled NAs")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 meanNoNA<-round(mean(totalStepsByDateNoNA,na.rm=T))
@@ -105,5 +112,5 @@ with(activityDataNoNA, {
 })
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 

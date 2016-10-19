@@ -146,6 +146,9 @@ plot(meanByInterval, type = &quot;l&quot;, main = (&quot;Steps vs. Interval (dai
 <h2>Imputing missing values</h2>
 <pre class="r"><code>numberNAs&lt;- sum(is.na(activityData))</code></pre>
 <p>the number of NAs in dataset is: 2304</p>
+<pre class="r"><code>maxInterval&lt;- which.max(meanByInterval)
+interval&lt;-names(maxInterval)</code></pre>
+<p>Max value found in 835 interval</p>
 <pre class="r"><code>#let's fill NA with mean by that interval value
 activityDataNoNA&lt;-activityData
 nRows &lt;- is.na(activityData$steps)

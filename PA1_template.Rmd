@@ -36,8 +36,15 @@ plot(meanByInterval, type = "l", main = ("Steps vs. Interval (daily average)"),
 ## Imputing missing values
 ```{r}
 numberNAs<- sum(is.na(activityData))
+
 ```
 the number of NAs in dataset is: `r numberNAs `
+
+```{r}
+maxInterval<- which.max(meanByInterval)
+interval<-names(maxInterval)
+```
+Max value found in `r interval ` interval
 
 ```{r}
 #let's fill NA with mean by that interval value
