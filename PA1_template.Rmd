@@ -44,7 +44,7 @@ the number of NAs in dataset is: `r numberNAs `
 maxInterval<- which.max(meanByInterval)
 interval<-names(maxInterval)
 ```
-Max value found in `r interval ` interval
+Max value found in interval: `r interval `
 
 ```{r}
 #let's fill NA with mean by that interval value

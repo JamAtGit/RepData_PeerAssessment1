@@ -50,7 +50,7 @@ the number of NAs in dataset is: 2304
 maxInterval<- which.max(meanByInterval)
 interval<-names(maxInterval)
 ```
-Max value found in 835 interval
+Max value found in interval: 835
 
 
 ```r
